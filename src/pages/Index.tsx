@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import GameCard from "@/components/GameCard";
+import ComingSoonCard from "@/components/ComingSoonCard";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -63,6 +64,45 @@ const Index = () => {
       reviewCount: 1987,
       price: "$59.99",
       image: "photo-1531297484001-80022131f5a1"
+    }
+  ];
+
+  const comingSoonGames = [
+    {
+      id: "coming-1",
+      title: "Starfield: Shattered Space",
+      genre: "Sci-Fi RPG",
+      releaseDate: "March 2025",
+      price: "$69.99",
+      image: "photo-1526374965328-7f61d4dc18c5",
+      description: "Explore the vast cosmos in this epic space adventure"
+    },
+    {
+      id: "coming-2", 
+      title: "Neon Dreams",
+      genre: "Cyberpunk Action",
+      releaseDate: "Summer 2025",
+      price: "$49.99",
+      image: "photo-1488590528505-98d2b5aba04b",
+      description: "Navigate a dystopian future in this action-packed thriller"
+    },
+    {
+      id: "coming-3",
+      title: "Shadow Realms",
+      genre: "Dark Fantasy",
+      releaseDate: "Fall 2025",
+      price: "$59.99", 
+      image: "photo-1531297484001-80022131f5a1",
+      description: "Battle ancient evils in mysterious shadow dimensions"
+    },
+    {
+      id: "coming-4",
+      title: "Quantum Protocol",
+      genre: "Puzzle Adventure",
+      releaseDate: "Winter 2025",
+      price: "$39.99",
+      image: "photo-1460925895917-afdab827c52f",
+      description: "Solve mind-bending puzzles across multiple realities"
     }
   ];
 
@@ -132,6 +172,23 @@ const Index = () => {
               </div>
             </TabsContent>
           </Tabs>
+        </section>
+
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-primary bg-clip-text text-transparent">
+              Coming Soon
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Get ready for these highly anticipated upcoming releases
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {comingSoonGames.map((game) => (
+              <ComingSoonCard key={game.id} {...game} />
+            ))}
+          </div>
         </section>
 
         <section className="text-center py-16 bg-gradient-to-r from-secondary/50 to-primary/10 rounded-2xl">
