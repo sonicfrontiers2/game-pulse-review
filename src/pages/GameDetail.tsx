@@ -1,5 +1,4 @@
 
-import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -13,7 +12,6 @@ const GameDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  // Mock game data - in a real app, this would come from an API
   const game = {
     id: id,
     title: "Cyberpunk 2077",

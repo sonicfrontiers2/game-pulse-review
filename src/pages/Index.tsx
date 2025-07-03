@@ -1,5 +1,4 @@
 
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -10,7 +9,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const Index = () => {
   const navigate = useNavigate();
 
-  // Mock games data - in a real app, this would come from an API
   const featuredGames = [
     {
       id: "1",
